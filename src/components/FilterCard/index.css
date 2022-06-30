@@ -1,0 +1,36 @@
+.employment-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  padding-left: 5px;
+}
+.employment-list-container {
+  list-style-type: none;
+  padding-left: 5px;
+  line-height: 30px;
+}
+.checkbox-label {
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'Roboto';
+}
+.employment-list-item {
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  margin-right: 8px;
+}
+.horizontal-rule {
+  border-width: 0;
+  height: 2px;
+  background-color: #475569;
+}
+.hr-height {
+  height: 2.5px;
+}
+.radio-item {
+  padding-top: 0;
+  margin-top: 0;
+}

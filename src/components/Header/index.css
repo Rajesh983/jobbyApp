@@ -1,0 +1,79 @@
+.navbar {
+  background-color: #202020;
+  width: 100%;
+  padding: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.nav-mobile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.mobile-icons-container {
+  list-style-type: none;
+  display: flex;
+}
+.mobile-icon {
+  margin-right: 20px;
+}
+.home-icon {
+  color: #ffffff;
+  height: 27px;
+  width: 27px;
+}
+.last-icon {
+  margin-right: 0;
+}
+.logo-in-header {
+  height: 20px;
+  width: 70px;
+}
+@media screen and (min-width: 768px) {
+  .nav-mobile-container {
+    display: none;
+  }
+}
+.nav-desktop-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+}
+.logo-in-header-desktop {
+  height: 37px;
+  width: 120px;
+}
+.home-jobs-container-desktop {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+.home-menu-item,
+.logout-desktop-btn {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+.space-after-home {
+  margin-right: 9px;
+}
+.logout-desktop-btn {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-width: 0;
+  border-radius: 4px;
+}
+@media screen and (max-width: 767px) {
+  .nav-desktop-container {
+    display: none;
+  }
+}
