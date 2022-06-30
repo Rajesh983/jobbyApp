@@ -67,3 +67,60 @@
   list-style-type: none;
   padding-left: 0;
 }
+.no-jobs-img {
+  height: 170px;
+  width: 270px;
+}
+.no-jobs-heading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+.no-jobs-description {
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 13px;
+  padding-top: 0;
+  margin-top: 0;
+}
+.no-jobs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .no-jobs-img {
+    height: 280px;
+    width: 380px;
+  }
+  .no-jobs-heading {
+    font-size: 28px;
+  }
+  .no-jobs-description {
+    font-size: 13px;
+  }
+}
+.jobs-failure-retry-btn {
+  background-color: #4f46e5;
+  color: #f1f5f9;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  border-width: 0;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .jobs-failure-retry-btn {
+    padding: 9px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

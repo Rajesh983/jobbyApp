@@ -1,0 +1,114 @@
+.job-item-details-bg-container {
+  background-color: #000000;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.description-url-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.company-url {
+  text-decoration: none;
+  color: #6366f1;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.url-arrow {
+  padding-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  .url-arrow {
+    padding-top: 0;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .company-url {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .job-description-heading {
+    font-size: 20px;
+  }
+  .job-description {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .job-card-item {
+    max-width: 800px;
+  }
+}
+.skills-list-container {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.skills-heading,
+.skill-name {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+.skill-img {
+  height: 40px;
+  width: 40px;
+  margin-right: 6px;
+}
+.skill-name {
+  font-size: 14px;
+  font-weight: 400;
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+.life-at-company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.life-at-company-img {
+  height: 220px;
+  width: 260px;
+}
+@media screen and (min-width: 768px) {
+  .skills-heading {
+    font-size: 21px;
+    margin-top: 26px;
+    margin-bottom: 30px;
+  }
+  .skill-img {
+    height: 55px;
+    width: 55px;
+    margin-right: 9px;
+  }
+  .skill-item {
+    margin-right: 120px;
+    margin-bottom: 70px;
+  }
+  .life-at-company-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .top-padding {
+    padding-top: 0;
+    margin-top: 0;
+    margin-right: 7px;
+  }
+}

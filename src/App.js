@@ -6,6 +6,8 @@ import Home from './components/Home'
 
 import Jobs from './components/Jobs'
 
+import JobItemDetails from './components/JobItemDetails'
+
 // These are the lists used in the application. You can move them to any component needed.
 
 const employmentTypesList = [
@@ -49,10 +51,12 @@ const salaryRangesList = [
 // Replace your code here
 
 const App = () => (
-  <Jobs
+  <JobItemDetails />
+
+  /*  <Jobs
     employmentTypesList={employmentTypesList}
     salaryRangesList={salaryRangesList}
-  />
+  /> */
 )
 
 export default App
