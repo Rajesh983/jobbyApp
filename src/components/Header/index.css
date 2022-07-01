@@ -77,3 +77,11 @@
     display: none;
   }
 }
+.mobile-logout-btn {
+  background-color: transparent;
+  border-width: 0;
+}
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+}

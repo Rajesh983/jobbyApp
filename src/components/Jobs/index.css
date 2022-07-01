@@ -124,3 +124,15 @@
     padding-right: 24px;
   }
 }
+.jobs-loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .jobs-loader-container {
+    width: 500px;
+  }
+}

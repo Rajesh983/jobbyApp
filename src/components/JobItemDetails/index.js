@@ -8,6 +8,8 @@ import {BsBriefcaseFill, BsBoxArrowUpRight} from 'react-icons/bs'
 
 import Header from '../Header'
 
+import SimilarJobCard from '../SimilarJobCard'
+
 const JobItemDetails = props => {
   const a = 'job card'
 
@@ -92,9 +94,36 @@ const JobItemDetails = props => {
     </div>
   )
 
-  return (
+  const renderSimilarJobsView = () => (
+    <div className="similar-jobs-container">
+      <h1 className="skills-heading">Similar Jobs</h1>
+      <ul className="similar-jobs-list-container">
+        <SimilarJobCard />
+      </ul>
+    </div>
+  )
+
+  const renderJobDetailsFailure = () => (
+    <div className="job-item-details-bg-container">
+      <div className="no-jobs-container">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+          alt="failure view"
+          className="no-jobs-img"
+        />
+        <h1 className="no-jobs-heading">Oops! Something Went Wrong</h1>
+        <p className="no-jobs-description">
+          We cannot seem to find the page you are looking for.
+        </p>
+        <button type="button" className="jobs-failure-retry-btn">
+          Retry
+        </button>
+      </div>
+    </div>
+  )
+
+  const renderJobDetailsSuccessView = () => (
     <>
-      <Header />
       <div className="job-item-details-bg-container">
         <div className="job-card-item">
           <div className="company-details-container">
@@ -147,7 +176,15 @@ const JobItemDetails = props => {
           {renderSkillsView()}
           {renderLifeAtCompany()}
         </div>
+        {renderSimilarJobsView()}
       </div>
+    </>
+  )
+
+  return (
+    <>
+      <Header />
+      {renderJobDetailsFailure()}
     </>
   )
 }

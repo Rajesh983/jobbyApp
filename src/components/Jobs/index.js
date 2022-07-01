@@ -2,6 +2,8 @@ import './index.css'
 
 import {Component} from 'react'
 
+import Loader from 'react-loader-spinner'
+
 import {BsSearch} from 'react-icons/bs'
 
 import Header from '../Header'
@@ -12,7 +14,25 @@ import FilterCard from '../FilterCard'
 
 import JobCard from '../JobCard'
 
+const apiStatusConstants = {
+  initial: 'INITIAL',
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+  inProgress: 'IN_PROGRESS',
+  isEmpty: 'EMPTY',
+}
+
 class Jobs extends Component {
+  state = {
+    apiStatus: apiStatusConstants.isEmpty,
+  }
+
+  renderLoadingView = () => (
+    <div className="jobs-loader-container" testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    </div>
+  )
+
   renderNoJobsView = () => (
     <div className="no-jobs-container">
       <img
@@ -59,8 +79,26 @@ class Jobs extends Component {
     </div>
   )
 
+  renderFinalView = () => {
+    const {apiStatus} = this.state
+
+    switch (apiStatus) {
+      case apiStatusConstants.inProgress:
+        return this.renderLoadingView()
+      case apiStatusConstants.failure:
+        return this.renderJobsFailureView()
+      case apiStatusConstants.success:
+        return this.renderJobsSuccessView()
+      case apiStatusConstants.isEmpty:
+        return this.renderNoJobsView()
+      default:
+        return null
+    }
+  }
+
   render() {
     const {employmentTypesList, salaryRangesList} = this.props
+
     return (
       <>
         <Header />
@@ -87,7 +125,7 @@ class Jobs extends Component {
                 salaryRangesList={salaryRangesList}
               />
             </div>
-            {this.renderJobsSuccessView()}
+            {this.renderFinalView()}
           </div>
         </div>
       </>

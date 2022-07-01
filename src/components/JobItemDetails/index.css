@@ -112,3 +112,19 @@
     margin-right: 7px;
   }
 }
+.similar-jobs-container {
+  width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .similar-jobs-container {
+    width: 100%;
+    max-width: 800px;
+  }
+}
+.similar-jobs-list-container {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
